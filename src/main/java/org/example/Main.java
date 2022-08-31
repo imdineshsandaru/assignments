@@ -9,8 +9,23 @@ public class Main {
         // Question No 1
         CharacterRemover characterRemoverObject =  new CharacterRemover();
         String output = characterRemoverObject.removeCharacters("abcdefgh",0,5);
-        System.out.println(output);
+        System.out.println("Q1: " + output);
 
+
+        // Question No 2
+        List<Chaser> chasers = new ArrayList<>();
+        Chaser chaser1 = new Chaser(15,3.0);
+        Chaser chaser2 = new Chaser(20,2.5);
+        Chaser chaser3 = new Chaser(30,3.5);
+
+        chasers.add(chaser1);
+        chasers.add(chaser2);
+        chasers.add(chaser3);
+
+        TreadmillGame treadmillGame = new TreadmillGame();
+        treadmillGame.onTreadmillData(chasers,10,5); // Test run 1
+        treadmillGame.onTreadmillData(chasers,5000,50000); // Test run 2
+        treadmillGame.onTreadmillData(chasers,10,20); // Test run 3
 
         // Question No 3
         List<Script> listOfScripts = new ArrayList<>();
@@ -28,7 +43,7 @@ public class Main {
         listOfScripts.add(obj5);
         listOfScripts.add(obj6);
 
-        System.out.println(filter(listOfScripts,"uuid","101"));
+        System.out.println("Q3: " +filter(listOfScripts,"uuid","101"));
 
     }
 
